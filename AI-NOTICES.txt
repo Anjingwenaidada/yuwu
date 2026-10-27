@@ -1,0 +1,18 @@
+Yuwu local background removal
+
+Model: U2NetP from the official rembg release
+https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2netp.onnx
+Original model: https://github.com/xuebinqin/U-2-Net
+License: Apache-2.0 (U2NET-LICENSE.txt); rembg code: MIT (REMBG-LICENSE.txt).
+Model MD5: 8e83ca70e441ab06c318d82300c84806
+Model SHA256: 309c8469258dda742793dce0ebea8e6dd393174f89934733ecc8b14c76f4ddd8
+Pre/postprocessing reference: rembg/sessions/u2netp.py and rembg/sessions/base.py.
+
+Runtime: ONNX Runtime Web 1.22.0, https://www.npmjs.com/package/onnxruntime-web/v/1.22.0
+License: MIT (ONNXRUNTIME-LICENSE.txt).
+Runtime files and model are self-hosted. Images are processed in a browser worker;
+no inference server receives the user's image. Original and processed image Blobs
+are stored in the current origin's IndexedDB, not in localStorage.
+
+This is a salient-object segmentation model. Fine strands, transparent materials,
+and complex scenes can require manual cleanup or a clearer source image.
